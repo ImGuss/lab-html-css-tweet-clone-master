@@ -2,7 +2,16 @@ body {
   background: rgb(244, 248, 249);
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(3, 3fr);
+}
+
 .tweet {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
   font-family: Helvetica;
   color: rgb(0, 0, 0);
   background: rgb(255, 255, 255);
@@ -50,6 +59,10 @@ body {
   float: left;
 }
 
+.user-name:hover {
+  text-decoration: underline;
+}
+
 .verified {
   float: left;
   width: 16px;
@@ -65,6 +78,10 @@ body {
   width: 100%;
   margin-left: 10px;
   margin-top: 4px;
+}
+
+.user-account:hover {
+  text-decoration: underline;
 }
 
 .clear-float {
@@ -95,6 +112,11 @@ body {
   float: right;
   width: 20%;
   text-align: center;
+}
+
+.follow-button:hover {
+  background-color: rgb(85, 172, 238);
+  color: white;
 }
 
 .time {
@@ -142,4 +164,15 @@ body {
   margin-left: 5px;
   font-size: 14px;
   font-family: helvetica;
+}
+
+.user-picture:hover,
+.user-name:hover,
+.user-account:hover,
+.follow-button:hover,
+.reply:hover,
+.retweet:hover,
+.retweet-number:hover,
+.likes:hover {
+  cursor: pointer;
 }
